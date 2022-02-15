@@ -7,6 +7,7 @@ const Counter = () => {
   //from
   // the state.
   const count = useSelector((state) => state.counter.count);
+  const currentColor = useSelector((state) => state.counter.currentColor);
   const dispatch = useDispatch();
 
   return (
@@ -44,6 +45,9 @@ const Counter = () => {
       >
         Reset
       </button>
+      <div
+        style={{ backgroundColor: `${currentColor}`, height: 200, width: 200 }}
+      ></div>
     </div>
   );
 };
